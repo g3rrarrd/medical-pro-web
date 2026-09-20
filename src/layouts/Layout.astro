@@ -1,0 +1,47 @@
+---
+interface Props {
+	title?: string;
+}
+
+const { title = "Inicio" } = Astro.props;
+
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Medical Pro - Cuidado Médico Avanzado</title>
+
+		<!-- SEO Meta Tags -->
+		<meta name="description" content="Medical Pro: Cuidado médico avanzado y especializado. Profesionales certificados, tecnología de vanguardia y atención humanizada. Agenda tu cita hoy mismo." />
+		<meta name="keywords" content="clínica médica, citas médicas, telemedicina, salud profesional, médicos especialistas" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://medicalpro.com/" />
+		<meta property="og:title" content="{title} | Medical Pro" />
+		<meta property="og:description" content="Cuidado médico avanzado y especializado. Agenda tu cita hoy mismo." />
+		<meta property="og:image" content="/og-image.jpg" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+	</head>
+	<body class="font-sans text-primary bg-white antialiased">
+		<slot />
+	</body>
+</html>
+<script>
+	import AOS from 'aos';
+	AOS.init({
+		duration: 800,
+		once: true,
+		easing: 'ease-out-quad',
+	});
+</script>

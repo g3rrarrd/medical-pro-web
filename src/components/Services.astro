@@ -1,0 +1,57 @@
+---
+const services = [
+	{
+		title: "Consulta General",
+		description: "Evaluación médica completa, diagnóstico preventivo y seguimiento de salud general.",
+		price: "50 USD",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M12 2v20"/><path d="m4.93 4.93 14.14 14.14"/><path d="m4.93 19.07 14.14-14.14"/></svg>`
+	},
+	{
+		title: "Especialidades",
+		description: "Consultas con médicos especialistas certificados en diversas áreas de la salud.",
+		price: "80 - 150 USD",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v10"/><path d="M18.4 6.6a9 9 0 1 1-12.8 0"/></svg>`
+	},
+	{
+		title: "Chequeo Ejecutivo",
+		description: "Panel completo de salud preventivo con análisis avanzados y revisión integral.",
+		price: "300 - 500 USD",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`
+	},
+	{
+		title: "Telemedicina",
+		description: "Consultas virtuales seguras y eficientes desde la comodidad de tu hogar.",
+		price: "40 USD",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 12h10"/><path d="M12 7v10"/></svg>`
+	}
+];
+---
+
+<section id="servicios" class="py-24 bg-white" data-aos="fade-up">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-16" data-aos="fade-up">
+			<h2 class="text-primary text-4xl md:text-5xl font-extrabold mb-4">Nuestros Servicios</h2>
+			<p class="text-gray-600 text-lg max-w-2xl mx-auto">
+				Ofrecemos una gama completa de servicios médicos con los más altos estándares de calidad y profesionalismo.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+			{services.map((service, index) => (
+				<div class="group bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay={index * 100}>
+					<div class="w-14 h-14 bg-medical-light text-secondary rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+						<Fragment set:html={service.icon} />
+					</div>
+					<h3 class="text-primary text-xl font-bold mb-3">{service.title}</h3>
+					<p class="text-gray-500 mb-6 leading-relaxed">
+						{service.description}
+					</p>
+					<div class="flex items-center justify-between pt-6 border-t border-gray-50">
+						<span class="text-sm text-gray-400 uppercase font-semibold">Precio desde</span>
+						<span class="text-primary font-bold text-lg">{service.price}</span>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

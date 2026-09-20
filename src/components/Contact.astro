@@ -1,0 +1,110 @@
+---
+---
+
+<section id="cita" class="py-24 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+			<!-- Left: Contact Info -->
+			<div class="space-y-12" data-aos="fade-right">
+				<div>
+					<h2 class="text-primary text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+						Agenda tu Cita <span class="text-secondary">Hoy Mismo</span>
+					</h2>
+					<p class="text-gray-600 text-lg leading-relaxed">
+						Estamos listos para atenderte. Completa el formulario y nos pondremos en contacto contigo vía WhatsApp para confirmar tu horario.
+					</p>
+				</div>
+
+				<div class="space-y-6">
+					<div class="flex items-center gap-4 p-4 rounded-2xl bg-medical-light border border-secondary/10 transition-colors hover:bg-secondary/5">
+						<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 2 2 0 0 1-1.62-1.1C18.5 21.5 16.5 21 15 21s-3.5.5-4.82 1.1A2 2 0 0 1 7.18 25 2 2 0 0 1 5 23v-3"/><path d="M12 12v8"/><path d="M8 15h8"/><path d="M9 18h6"/></svg>
+						</div>
+						<div>
+							<p class="text-sm text-gray-400 uppercase font-semibold">Ubicación</p>
+							<p class="text-primary font-medium">Av. Médica 123, Ciudad Salud, CP 45678</p>
+						</div>
+					</div>
+
+					<div class="flex items-center gap-4 p-4 rounded-2xl bg-medical-light border border-secondary/10 transition-colors hover:bg-secondary/5">
+						<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M2 10h20"/><path d="M10 4v16"/></svg>
+						</div>
+						<div>
+							<p class="text-sm text-gray-400 uppercase font-semibold">Correo Electrónico</p>
+							<p class="text-primary font-medium">contacto@medicalpro.com</p>
+						</div>
+					</div>
+
+					<div class="flex items-center gap-4 p-4 rounded-2xl bg-medical-light border border-secondary/10 transition-colors hover:bg-secondary/5">
+						<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 2 2 0 0 1-1.62-1.1C18.5 21.5 16.5 21 15 21s-3.5.5-4.82 1.1A2 2 0 0 1 7.18 25 2 2 0 0 1 5 23v-3"/><path d="M12 12v8"/><path d="M8 15h8"/><path d="M9 18h6"/></svg>
+						</div>
+						<div>
+							<p class="text-sm text-gray-400 uppercase font-semibold">Teléfono</p>
+							<p class="text-primary font-medium">+1 (555) 123-4567</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Form Side -->
+			<div class="bg-white p-8 rounded-3xl shadow-2xl border border-gray-100 relative overflow-hidden" data-aos="fade-left">
+				<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-bl-full blur-2xl"></div>
+				<form id="appointment-form" class="relative z-10 space-y-6">
+					<div>
+						<label for="name" class="block text-sm font-semibold text-primary mb-2">Nombre Completo</label>
+						<input type="text" id="name" name="name" required placeholder="Ej. Juan Pérez" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all outline-none" />
+					</div>
+
+					<div>
+						<label for="phone" class="block text-sm font-semibold text-primary mb-2">Teléfono WhatsApp</label>
+						<input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all outline-none" />
+					</div>
+
+					<div>
+						<label for="service" class="block text-sm font-semibold text-primary mb-2">Servicio de Interés</label>
+						<select id="service" name="service" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all outline-none bg-white">
+							<option value="">Seleccione un servicio</option>
+							<option value="Consulta General">Consulta General</option>
+							<option value="Especialidades Médicas">Especialidades Médicas</option>
+							<option value="Chequeo Ejecutivo">Chequeo Ejecutivo</option>
+							<option value="Telemedicina">Telemedicina</option>
+						</select>
+					</div>
+
+					<div>
+						<label for="date" class="block text-sm font-semibold text-primary mb-2">Fecha Preferida</label>
+						<input type="date" id="date" name="date" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all outline-none" />
+					</div>
+
+					<button type="submit" class="w-full bg-secondary text-white py-4 rounded-xl font-bold text-lg hover:bg-primary transition-colors shadow-lg flex items-center justify-center gap-2 group">
+						<span>Enviar Solicitud vía WhatsApp</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	const form = document.getElementById('appointment-form');
+
+	form?.addEventListener('submit', (e) => {
+		e.preventDefault();
+
+		const name = (document.getElementById('name') as HTMLInputElement).value;
+		const phone = (document.getElementById('phone') as HTMLInputElement).value;
+		const service = (document.getElementById('service') as HTMLSelectElement).value;
+		const date = (document.getElementById('date') as HTMLInputElement).value;
+
+		// Example clinic phone number
+		const clinicPhone = '1234567890';
+
+		const message = `Hola Medical Pro, mi nombre es *${name}*. Me gustaría agendar una cita para *${service}* el día *${date}*. Mi número de contacto es *${phone}*.`;
+		const encodedMessage = encodeURIComponent(message);
+
+		window.open(`https://wa.me/${clinicPhone}?text=${encodedMessage}`, '_blank');
+	});
+</script>
