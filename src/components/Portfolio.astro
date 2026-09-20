@@ -1,0 +1,55 @@
+---
+const videos = [
+	{
+		id: '7DtHxNNXbXA',
+		title: 'Excelencia en Procedimientos Médicos',
+		description: 'Descubre la precisión y el cuidado que aplicamos en cada uno de nuestros tratamientos especializados.'
+	},
+	{
+		id: '7DtHxNNXbXA', // Placeholder for more videos
+		title: 'Tecnología de Vanguardia',
+		description: 'Explora cómo integramos la última tecnología médica para diagnósticos más rápidos y precisos.'
+	},
+	{
+		id: '7DtHxNNXbXA', // Placeholder for more videos
+		title: 'Testimonios de Pacientes',
+		description: 'Historias reales de recuperación y bienestar gracias a nuestra atención humanizada.'
+	}
+];
+---
+
+<section id="trabajos" class="py-24 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-16" data-aos="fade-up">
+			<h2 class="text-primary text-4xl md:text-5xl font-extrabold mb-4">Nuestros Trabajos</h2>
+			<p class="text-gray-600 text-lg max-w-2xl mx-auto">
+				Te invitamos a conocer más sobre nuestra metodología y los resultados que logramos con nuestros pacientes.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			{videos.map((video) => (
+				<div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group" data-aos="fade-up">
+					<div class="aspect-video w-full overflow-hidden">
+						<iframe
+							class="w-full h-full"
+							src={`https://www.youtube.com/embed/${video.id}`}
+							title={video.title}
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen
+						></iframe>
+					</div>
+					<div class="p-6">
+						<h3 class="text-primary text-xl font-bold mb-2 group-hover:text-secondary transition-colors">
+							{video.title}
+						</h3>
+						<p class="text-gray-500 leading-relaxed">
+							{video.description}
+						</p>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
