@@ -1,0 +1,70 @@
+---
+import { User, Stethoscope, Award } from 'lucide-astro';
+---
+
+<section id="doctors" class="py-20 bg-medical-light">
+	<div class="container mx-auto px-4">
+		<div class="text-center mb-16" data-aos="fade-up">
+			<h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Especialistas de Confianza</h2>
+			<p class="text-lg text-secondary max-w-2xl mx-auto">
+				En <span class="font-semibold text-primary">MaxiloSafe</span>, contamos con un equipo de profesionales altamente capacitados para brindarte la mejor atención.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+			<!-- Doctor 1: Maxilofacial -->
+			<div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300" data-aos="fade-right">
+				<div class="aspect-square overflow-hidden">
+					<img 
+						src="/julian.jpg" 
+						alt="Dr. Julián - Especialista Maxilofacial" 
+						class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+					/>
+				</div>
+				<div class="p-8 text-center">
+					<div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 text-secondary mb-4">
+						<Stethoscope size={24} />
+					</div>
+					<h3 class="text-2xl font-bold text-primary mb-2">Dr. Julián</h3>
+					<p class="text-secondary font-medium mb-4">Especialista Maxilofacial</p>
+					<p class="text-gray-600 mb-6">
+						Experto en cirugía reconstructiva y estética facial, dedicado a devolver la funcionalidad y la confianza a cada paciente.
+					</p>
+					<div class="flex justify-center gap-4 text-primary/60">
+						<div class="flex items-center gap-1 text-sm">
+							<Award size={16} />
+							<span>15+ años exp.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Doctor 2: Anesthesiologist -->
+			<div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300" data-aos="fade-left">
+				<div class="aspect-square overflow-hidden">
+					<img 
+						src="/sandra.jpg" 
+						alt="Dra. Sandra - Anestesióloga" 
+						class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+					/>
+				</div>
+				<div class="p-8 text-center">
+					<div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 text-secondary mb-4">
+						<User size={24} />
+					</div>
+					<h3 class="text-2xl font-bold text-primary mb-2">Dra. Sandra</h3>
+					<p class="text-secondary font-medium mb-4">Anestesióloga Especializada</p>
+					<p class="text-gray-600 mb-6">
+						Especialista en manejo del dolor y anestesia de alta complejidad, garantizando seguridad y bienestar en cada procedimiento.
+					</p>
+					<div class="flex justify-center gap-4 text-primary/60">
+						<div class="flex items-center gap-1 text-sm">
+							<Award size={16} />
+							<span>12+ años exp.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
